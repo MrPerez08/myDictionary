@@ -1,0 +1,30 @@
+Lemma / Lexeme: The base dictionary form of the word (e.g., "use").
+
+
+Inflection: The process of changing the form of a word to express different grammatical categories like:
+Tense (for verbs: use, uses, using, used)
+Number (for nouns: use, uses; for verbs: use vs. uses in 3rd person singular)
+Person (for verbs: I use, he uses)
+Case (more prominent in languages like Latin or German, e.g., he/him/his)
+Gender (in some languages)
+Degree (for adjectives/adverbs: big, bigger, biggest)
+Inflected Forms: The resulting different forms of the word created by inflection (e.g., uses, using, used).
+
+
+Specifically for Verbs:
+The set of inflected forms showing tense, person, number, aspect, etc., is called its Conjugation.
+So, the list "use, uses, using, used" is the conjugation of the verb "use" (in its primary forms).
+
+
+What it's NOT:
+Derivation: Creating a new word with a different meaning or part of speech by adding prefixes or suffixes (e.g., use -> usable, user, reuse, usage). These are different lexemes/words.
+Homonyms: Different words that happen to be spelled/sounded the same (e.g., "bank" - river vs. money).
+Therefore, when you ask for "use, uses, using, used", you are asking for the inflected forms (specifically the conjugation) of the verb "use".
+
+
+Here are the main inflected forms for the verb "use":
+Base Form / Infinitive: use
+3rd Person Singular Present: uses
+Present Participle / Gerund: using
+Simple Past Tense: used
+Past Participle: used

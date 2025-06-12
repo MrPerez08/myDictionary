@@ -1,0 +1,21 @@
+Lists
+Tuples
+Tuples (collections module)
+Dictionaries
+Sets
+Arrays (arraymodule)
+Arrays (numPy)
+Strings
+Bytearray
+Deque
+
+
+
+Choosing the Right Structure:
+Lists: General purpose, mutable sequences
+Tuples: Immutable sequences (for fixed data)
+Dictionaries: Key-value mappings
+Sets: Unique element collections
+Arrays/NumPy arrays: Numerical data processing
+Deque: When you need fast appends/pops at both ends
+Named tuples: When you need tuple immutability with named fields

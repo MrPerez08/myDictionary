@@ -1,4 +1,11 @@
+#open text documents
+vocabtext=open("vocab.txt","r")
+definitionstext=open("definitions.txt","r")
 
-with open("test.txt","r") as file:
-    lines = file.readlines()
-    print(lines[0])
+#turn the text documents into lists with each element corresponding to a vocab word
+vocab = vocabtext.readlines()
+definitions=definitionstext.readlines()
+
+
+deck=""
+

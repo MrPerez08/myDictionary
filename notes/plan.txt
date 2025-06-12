@@ -1,0 +1,4 @@
+Quizlet import aid (converts the two text documents into a single document that will allow you to easily copy paste the text for easy imported flashcards)
+Discover a more organized way to compartmentalize components of a word (the definitions text document at the moment contains the "kind" of word it is (adjective, verb, noun) the definition itself, and an example of how its usewd properly)
+Develop a UI 
+How to get an AI model (possibly utilizing Gemini API) to generate the definitions for the user
