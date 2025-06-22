@@ -1,3 +1,5 @@
+
+
 #open text documents
 vocabtext=open("vocab.txt","r")
 definitionstext=open("simpledefinitions.txt","r")
@@ -6,7 +8,7 @@ definitionstext=open("simpledefinitions.txt","r")
 vocab = vocabtext.readlines()
 definitions=definitionstext.readlines()
 
-#Create a dict that has each word 'contain' the vocabulary
+#Create a dict that allows each word to 'contain' its vocabulary
 dictionary = {v: d for v, d in zip(vocab,definitions)}
 print(dictionary)
 
