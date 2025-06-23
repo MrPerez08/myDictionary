@@ -1,4 +1,6 @@
+import json
 
+from test.VocabClasses import VocabClasses
 
 #open text documents
 vocabtext=open("vocab.txt","r")
@@ -8,20 +10,34 @@ definitionstext=open("simpledefinitions.txt","r")
 vocab = vocabtext.readlines()
 definitions=definitionstext.readlines()
 
+for i in range (len(vocab)):
+    vocab[i]=vocab[i].replace("\n","")
+    definitions[i]=definitions[i].replace("\n","")
+
+
 #Create a dict that allows each word to 'contain' its vocabulary
 dictionary = {v: d for v, d in zip(vocab,definitions)}
-print(dictionary)
+
 
 #Easily prints specific elements from the dict to allows for the simple copy paste of information into Quizlets import cards feature
+keys=list(dictionary.keys())
+values=list(dictionary.values())
+string=""
+
+for i in range (len(dictionary)):
+    string+=keys[i]+"="+values[i]+"+"
+
+print(string)
+
+jsonString=json.dumps(string)
+
+with open("deck.json", 'w') as f:
+    f.write(jsonString)
 
 
 
 
-
-
-
-
-
+#Save to a json
 
 
 
