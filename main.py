@@ -1,6 +1,5 @@
 import json
 
-from test.VocabClasses import VocabClasses
 
 #open text documents
 vocabtext=open("vocab.txt","r")
