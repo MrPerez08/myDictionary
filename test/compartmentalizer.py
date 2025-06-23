@@ -2,14 +2,30 @@ from datetime import datetime
 
 
 class word:
-    def __init__(self,type,word,definition,example):
+    def __init__(self,word,definition,example=None,type=None):
         self.word=word
-        self.definition=definition
+        self.variations=[type,definition,example]
+
+
+
+
+
+    def addAttributes(self,definition,type=None,example=None):
+
+        pass
+    def editAttributes(self,type=None,definition=None,example=None):
+        pass
+
+
+
+
+
+
 
 class Deck:
-    def __init__(self,elements,desc):
+    def __init__(self,elements,description="None"):
         self.time=datetime.now()
-        self.description=desc
+        self.description=description
         self.elements=elements
         self.length=len(self.elements)
         self.editHistory=[]

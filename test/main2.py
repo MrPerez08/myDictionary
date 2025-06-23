@@ -10,7 +10,7 @@ definitions=definitionstext.readlines()
 
 bigContainer=[]
 for i in range(len(vocab)):
-    bigContainer.append(word(None,vocab[i],definitions[i],None))
+    bigContainer.append(word(vocab[i],definitions[i]))
 
 
 
