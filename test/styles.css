@@ -8,6 +8,15 @@
    outline: none;
    border: none;
 }
+
+#definitions{
+    display: flex;
+    flex-direction: column; /* Key property */
+    gap: 15px; /* Consistent spacing between items */
+}
+
+
+
 #frame{
     width: 60%;
     height: 80%;
