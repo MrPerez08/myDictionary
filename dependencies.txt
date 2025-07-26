@@ -1,0 +1,1 @@
+hunspell.hxx    for spellchecking (was initially going to use Google Gemini AI API)
