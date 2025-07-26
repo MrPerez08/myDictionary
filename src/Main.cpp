@@ -25,44 +25,6 @@
 #include <memory>
 #include <hunspell/hunspell.hxx>
 
-class VocabularyProcessor{
-    private:
-    std::unique_ptr<Hunspell> spellChecker;
-
-    public:
-        VocabularyProcessor(const std::string& affPath, const std::string& dicPath) {
-        spellChecker = std::make_unique<Hunspell>(affPath.c_str(), dicPath.c_str());
-    }
-
-    bool isSpelledCorrectly(const std::string& word) {
-        return spellChecker->spell(word);
-    }
-
-    std::vector<std::string> getSuggestions(const std::string& word) {
-        return spellChecker->suggest(word);
-    }
-};
-
-
-
-void checkWords(VocabularyProcessor& processor, const std::vector<std::string>& words) {
-    for (const auto& word : words) {
-        if (processor.isSpelledCorrectly(word)) {
-            std::cout << word << " - Correct\n";
-        } else {
-            std::cout << word << " - Incorrect\n";
-            auto suggestions = processor.getSuggestions(word);
-            if (!suggestions.empty()) {
-                std::cout << "  Suggestions:\n";
-                for (const auto& sug : suggestions) {
-                    std::cout << "  - " << sug << "\n";
-                }
-            }
-        }
-    }
-}
-
-
 
 void readFile(const std::string& filename){
     std::ifstream inputFile(filename);
@@ -112,15 +74,7 @@ void readFile(const std::string& filename){
 
 int main(){
     try{
-        #ifdef _WIN32
-        const std::string affPath = "en_US.aff";
-        const std::string dicPath = "en_US.dic";
-        #else
-        const std::string affPath = "/usr/share/hunspell/en_US.aff";
-        const std::string dicPath = "/usr/share/hunspell/en_US.dic";
-        #endif
-
-        VocabularyProcessor processor(affPath, dicPath);
+        
 
         readFile("testin.txt");
     }
