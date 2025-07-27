@@ -2,20 +2,28 @@
   "version": "2.0.0",
   "tasks": [
     {
-      "label": "build cpp",
+      "label": "build",
       "type": "shell",
       "command": "g++",
       "args": [
-        "-g",
-        "${file}",
-        "-o",
-        "${fileDirname}\\${fileBasenameNoExtension}.exe"
+        "Main.cpp",
+        "-o", "Main",
+        "-I/mingw64/include",
+        "-L/mingw64/lib",
+        "-lhunspell"
       ],
       "group": {
         "kind": "build",
         "isDefault": true
       },
-      "problemMatcher": ["$gcc"]
+      "problemMatcher": []
+    },
+    {
+      "label": "run",
+      "type": "shell",
+      "command": "./Main",
+      "dependsOn": ["build"],
+      "problemMatcher": []
     }
   ]
 }

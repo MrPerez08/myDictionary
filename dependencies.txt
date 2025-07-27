@@ -1,1 +1,6 @@
 hunspell.hxx    for spellchecking (was initially going to use Google Gemini AI API)
+
+
+cd /c/Users/aidan/OneDrive/Desktop/programmin/VocabSorter/src
+g++ Main.cpp -o Main -I/mingw64/include -L/mingw64/lib -lhunspell
+./Main

@@ -24,8 +24,53 @@
 #include <vector>
 #include <memory>
 #include <cctype>
+#include <algorithm>
 #include <unordered_set>
 #include <hunspell/hunspell.hxx>
+
+size_t levenshteinDistance(const std::string& s1, const std::string& s2) {
+    const size_t m = s1.size();
+    const size_t n = s2.size();
+        
+    if (m == 0) return n;
+    if (n == 0) return m;
+        
+    std::vector<std::vector<size_t>> matrix(m + 1, std::vector<size_t>(n + 1));
+        
+    for (size_t i = 0; i <= m; ++i) matrix[i][0] = i;
+    for (size_t j = 0; j <= n; ++j) matrix[0][j] = j;
+        
+    for (size_t i = 1; i <= m; ++i) {
+        for (size_t j = 1; j <= n; ++j) {
+            size_t cost = (s1[i-1] == s2[j-1]) ? 0 : 1;
+            matrix[i][j] = std::min({
+                matrix[i-1][j] + 1,     // deletion
+                matrix[i][j-1] + 1,     // insertion
+                matrix[i-1][j-1] + cost // substitution
+            });
+        }
+    }
+    return matrix[m][n];
+}
+
+std::vector<std::string> spellChecker(std::vector<std::string>& localWordList){
+    Hunspell hunspell("../dictionaries/en_US.aff", "../dictionaries/en_US.dic");
+
+    // Then in your spell check:
+    for(auto& vocabWord : localWordList) {
+        if(hunspell.spell(vocabWord) == 0) {
+            auto suggestions = hunspell.suggest(vocabWord);
+            if (!suggestions.empty()) {
+                size_t distance = levenshteinDistance(vocabWord, suggestions[0]);
+                if (distance <= 2) {  // Only if very close
+                    vocabWord = suggestions[0];
+                }
+            }
+        }
+    }
+    return localWordList;
+}
+
 
 
 void readFile(const std::string& filename){
@@ -73,33 +118,18 @@ void readFile(const std::string& filename){
     inputFile.close();
     
 
-    for(int i = 0;i<localWordList.size();i++){localWordList[i][0]=toupper(localWordList[i][0]);}//Capitalizes the first letter of all words in the localWordList vector variable
-    
-
     //Check spelling for all words in vector
-    // Check spelling for all words in vector
-    Hunspell hunspell("en_US.aff", "en_US.dic");
-    for(const auto& vocabWord : localWordList) {
-        // New non-deprecated spell check
-        if(hunspell.spell(vocabWord) == 0) {  // Returns 0 if misspelled
-            std::cout << "Misspelled word: " << vocabWord << std::endl;
-            
-            // Modern way to get suggestions
-            std::vector<std::string> suggestions = hunspell.suggest(vocabWord);
-            
-            if (!suggestions.empty()) {
-                std::cout << "  Suggestions (" << suggestions.size() << "): ";
-                for (size_t j = 0; j < suggestions.size() && j < 5; j++) {
-                    std::cout << suggestions[j];
-                    if (j < suggestions.size()-1 && j < 4) std::cout << ", ";
-                }
-                std::cout << "\n";
-            }
-        }
-    }
+    std::cout << "Enable spellchecking? (y/n)" <<std::endl;
+    char spellcheck;
+    std::cin>>spellcheck;
+    if(spellcheck=='y'){localWordList = spellChecker(localWordList);}
+
+    
+    //Capitalizes the first letter of all words in the localWordList vector variable
+    for(int i = 0;i<localWordList.size();i++){localWordList[i][0]=toupper(localWordList[i][0]);}
 
 
-    //The next three lines allow for the removal of duplicate words
+    //Allow for the removal of duplicate words
     std::unordered_set<std::string> seen;
     auto new_end = std::remove_if(localWordList.begin(), localWordList.end(),[&seen](const std::string& word) {return !seen.insert(word).second;});
     localWordList.erase(new_end, localWordList.end());

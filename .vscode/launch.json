@@ -2,17 +2,22 @@
   "version": "0.2.0",
   "configurations": [
     {
-      "name": "Run C++",
+      "name": "Run My Program",
       "type": "cppdbg",
       "request": "launch",
-      "program": "${fileDirname}\\${fileBasenameNoExtension}.exe",
+      "program": "${workspaceFolder}/src/Main.cpp",
       "args": [],
       "stopAtEntry": false,
-      "cwd": "${workspaceFolder}",
-      "environment": [],
+      "cwd": "${workspaceFolder}/src",
+      "environment": [
+        {
+          "name": "PATH",
+          "value": "/mingw64/bin;${env:PATH}"
+        }
+      ],
       "externalConsole": false,
       "MIMode": "gdb",
-      "miDebuggerPath": "path\\to\\gdb.exe",
+      "miDebuggerPath": "/mingw64/bin/gdb.exe",
       "setupCommands": [
         {
           "description": "Enable pretty-printing for gdb",
@@ -20,7 +25,7 @@
           "ignoreFailures": true
         }
       ],
-      "preLaunchTask": "build cpp"
+      "preLaunchTask": "build"
     }
   ]
 }
