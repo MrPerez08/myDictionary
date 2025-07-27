@@ -23,6 +23,7 @@
 #include <string>
 #include <vector>
 #include <memory>
+#include <cctype>
 #include <hunspell/hunspell.hxx>
 
 
@@ -43,8 +44,12 @@ void readFile(const std::string& filename){
     if(separator=='L'){
         std::string line;
         while (std::getline(inputFile,line)){
+            std::string finalLine;
             if (!line.empty()) {
-                localWordList.push_back(line);
+                for(char c : line){
+                    if(isalpha(c)){finalLine+=c;}
+                }
+                localWordList.push_back(finalLine);
             }
         }
     }
