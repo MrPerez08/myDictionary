@@ -61,9 +61,9 @@ void readFile(const std::string& filename){
                     localWordList.push_back(currentWord);
                     currentWord.clear();
                 }
-            } else{
-                currentWord += ch;
-            }
+            } 
+            else if (!isalpha(ch)){continue;}
+            else{currentWord += ch;}
         }
         if(!currentWord.empty()){
             localWordList.push_back(currentWord);
@@ -71,6 +71,9 @@ void readFile(const std::string& filename){
     }
     inputFile.close();
     
+    for(int i = 0;i<localWordList.size();i++){localWordList[i][0]=toupper(localWordList[i][0]);}
+
+
 
     for (const auto& word : localWordList){
         std::cout << word << std::endl;
