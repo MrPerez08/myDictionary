@@ -24,6 +24,7 @@
 #include <vector>
 #include <memory>
 #include <cctype>
+#include <unordered_set>
 #include <hunspell/hunspell.hxx>
 
 
@@ -71,7 +72,40 @@ void readFile(const std::string& filename){
     }
     inputFile.close();
     
-    for(int i = 0;i<localWordList.size();i++){localWordList[i][0]=toupper(localWordList[i][0]);}
+
+    for(int i = 0;i<localWordList.size();i++){localWordList[i][0]=toupper(localWordList[i][0]);}//Capitalizes the first letter of all words in the localWordList vector variable
+    
+
+    //Check spelling for all words in vector
+    // Check spelling for all words in vector
+    Hunspell hunspell("en_US.aff", "en_US.dic");
+    for(const auto& vocabWord : localWordList) {
+        // New non-deprecated spell check
+        if(hunspell.spell(vocabWord) == 0) {  // Returns 0 if misspelled
+            std::cout << "Misspelled word: " << vocabWord << std::endl;
+            
+            // Modern way to get suggestions
+            std::vector<std::string> suggestions = hunspell.suggest(vocabWord);
+            
+            if (!suggestions.empty()) {
+                std::cout << "  Suggestions (" << suggestions.size() << "): ";
+                for (size_t j = 0; j < suggestions.size() && j < 5; j++) {
+                    std::cout << suggestions[j];
+                    if (j < suggestions.size()-1 && j < 4) std::cout << ", ";
+                }
+                std::cout << "\n";
+            }
+        }
+    }
+
+
+    //The next three lines allow for the removal of duplicate words
+    std::unordered_set<std::string> seen;
+    auto new_end = std::remove_if(localWordList.begin(), localWordList.end(),[&seen](const std::string& word) {return !seen.insert(word).second;});
+    localWordList.erase(new_end, localWordList.end());
+
+
+    //Allow for sorting decision (keep same, alphabetical ascending/descending random)
 
 
 
