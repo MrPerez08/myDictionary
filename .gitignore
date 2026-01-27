@@ -1,8 +1,1 @@
-node_modules/
-
-.vscode/
-.idea/
-
-dictionaries/
-
-*.exe
+/resources 
