@@ -14,23 +14,12 @@ def redundantcies(list):
   return temp
 """
 
-def redundancies(list):
-  originallist=list
-  current=list[0]
-  new_list=[]
-  while(len(list)>0):
-    i=0
-    while(i<len(originallist)):
-      
-      if (current == list[i+1]):
-        list.pop(i+1)
-        
-    new_list.append(current)
-    i+=1
-    
-    print(i)
-    
-  return new_list
+def redundancies(lst):
+    new_list = []
+    for word in lst:
+        if word not in new_list:
+            new_list.append(word)
+    return new_list
 
 
 
@@ -39,9 +28,8 @@ try:
         content = file.read()
         words = redundancies(content.splitlines())
         words = sorted(words)
-        print(words)
         new_list = [item for item in words if item != '']
-        #print(new_list)
+        print(new_list)
         
         
 except Exception as e:
