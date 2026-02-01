@@ -1,22 +1,16 @@
+import json
 file_path = 'resources/vocab.txt'
 
 
-"""
-def redundantcies(list):
-  temp=[]
-  i=0
-  length=len(list)
-  while(i < length-1):
-    if list[i] == list[i+1]:
-      temp.append(list.pop(i))
-    length=len(list)
-    i+=1
-  return temp
-"""
+class Word:
+  def __init__(self,vocab,definition=""):
+    self.vocab = vocab
+    self.definition = definition
 
-def redundancies(lst):
+
+def redundancies(list):
     new_list = []
-    for word in lst:
+    for word in list:
         if word not in new_list:
             new_list.append(word)
     return new_list
@@ -29,7 +23,12 @@ try:
         words = redundancies(content.splitlines())
         words = sorted(words)
         new_list = [item for item in words if item != '']
-        print(new_list)
+        obj_list=[]
+        i=0
+        while(len(new_list)>i):
+          obj_list.append(Word(new_list[i]))
+          i+=1
+          
         
         
 except Exception as e:
