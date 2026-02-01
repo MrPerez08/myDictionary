@@ -2,3 +2,11 @@ Quizlet import aid (converts the two text documents into a single document that 
 Discover a more organized way to compartmentalize components of a word (the definitions text document at the moment contains the "kind" of word it is (adjective, verb, noun) the definition itself, and an example of how its usewd properly)
 Develop a UI 
 How to get an AI model (possibly utilizing Gemini API) to generate the definitions for the user
+
+
+
+if word is a subset of the vocab word (the word is contained in vocabword) then it is considered a composition and an object should be created
+
+checks to make sure compositions of compositions are branches of the composition and should NOT be duplicated for both the vocab word and the 
+composition for example the word unity, unit and uni, all three share very different definitions AND uni is contained IN Unit and Unit is contained in Unity so 
+uni should NOT be contained in Unity? should we do that to reduce redundancies?????? or what
