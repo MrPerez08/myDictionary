@@ -922,6 +922,7 @@ excursion
 Outcropped
 Erosion
 Cretacious
+lucrative
 Peruse
 Prowl
 Chalky
@@ -933,6 +934,7 @@ Rile
 Karmic
 Eccentric
 pragmatic
+Dispensational
 
 
 Prometheus

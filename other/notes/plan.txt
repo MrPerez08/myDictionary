@@ -7,6 +7,10 @@ How to get an AI model (possibly utilizing Gemini API) to generate the definitio
 
 if word is a subset of the vocab word (the word is contained in vocabword) then it is considered a composition and an object should be created
 
+
+
+
 checks to make sure compositions of compositions are branches of the composition and should NOT be duplicated for both the vocab word and the 
 composition for example the word unity, unit and uni, all three share very different definitions AND uni is contained IN Unit and Unit is contained in Unity so 
-uni should NOT be contained in Unity? should we do that to reduce redundancies?????? or what
+uni should NOT be contained in Unity? should we do that to reduce redundancies?????? or what YES make a list of tuples with one list being the list of objects and
+the second list holding the strings

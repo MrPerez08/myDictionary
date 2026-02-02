@@ -2,19 +2,20 @@ import json
 file_path = 'resources/vocab.txt'
 
 
-class Composition:
-    def __init__(self,vocab):
-        self.root=vocab
-        self.compositions=[]
 
-
-
-
+        
 
 class Word:
-    def __init__(self,vocab,definition=""):
-        self.vocab = vocab
+    def __init__(self,word,definition=""):
+        self.vocab = word
         self.definition = definition
+        
+    compositions = [[],[]]
+    #First list contains the OBJECTS of the composed words and the second list contains the STRINGS of the composed words
+    
+    def add_Composition(self,vocab):
+        self.compositions[0].append(vocab)
+        self.compositions[1].append(vocab.word)
 
 
 def redundancies(list):
@@ -27,6 +28,19 @@ def redundancies(list):
 
 
 
+
+x=Word("stupidity")
+y=Word("stupid")
+
+x.add_Composition(y)
+
+print(x.compositions[1])
+
+
+
+
+
+"""
 try:
     with open(file_path, 'r') as file:
         content = file.read()
@@ -42,7 +56,7 @@ try:
             print(word.vocab)
 except Exception as e:
     print(f"An error occurred: {e}")
-    
+"""
     
     
     
