@@ -1,9 +1,8 @@
 import json
-file_path = 'resources/vocab.txt'
+file_path = 'resources/input/vocab.txt'
+file2 = "resources/input/vocab2.txt"
 
 
-
-        
 
 class Word:
     def __init__(self,word,definition=""):
@@ -25,49 +24,52 @@ def redundancies(list):
     return new_list
 
 
-
-#El testing twin
+"""
+El testing twin
 x=Word("stupidity")
 y=Word("stupid")
 if y.vocab in x.vocab:
     x.add_Composition(y)
 
-#print(x.compositions[0].vocab)
+print(x.compositions[0].vocab)
+"""
 
-
-
-try:
-    with open(file_path, 'r') as file:
-        content = file.read()
-        content = sorted(redundancies(content.splitlines()))
-        new_list = [item for item in content if item != '']
-        
-        #List of Word instances generation
-        obj_list=[]
-        i=0
-        while(len(new_list)>i):
-            obj_list.append(Word(new_list[i]))
-            i+=1
-        
-        i=0
-        #Checking for word compositions
-        while(len(new_list)>i):
-            t=1
-            while(len(new_list)>t):
-                if(obj_list[t].vocab in obj_list[i].vocab):
-                    obj_list[i].add_Composition(obj_list[t])
-                t+=1
-            i+=1
+obj_list=[]
+def run(filep):
+    try:
+        with open(filep, 'r') as file:
+            content = file.read()
+            content = sorted(redundancies(content.splitlines()))
+            new_list = [item for item in content if item != '']
             
-        for word in obj_list:
-            print(word.vocab)
+            #List of Word instances generation
+            i=0
+            while(len(new_list)>i):
+                obj_list.append(Word(new_list[i]))
+                i+=1
             
-        
-except Exception as e:
-    print(f"An error occurred: {e}")
+            i=0
+            #Checking for word compositions
+            while(len(new_list)>i):
+                t=1
+                while(len(new_list)>t):
+                    if(obj_list[t].vocab in obj_list[i].vocab):
+                        obj_list[i].add_Composition(obj_list[t])
+                    t+=1
+                i+=1
 
-    
-    
-    
+
+    except Exception as e:
+        print(f"An error occurred: {e}")
 
 
+
+
+run(file_path)
+run(file2)
+
+for x in obj_list:
+    print(x.vocab)
+    
+#Need to implement redundancy functionality (if their are words in the new file that were already RAN from the initial file)
+#Need to implement JSON implementation for nonvolatile storage saving 
