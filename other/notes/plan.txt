@@ -14,3 +14,10 @@ checks to make sure compositions of compositions are branches of the composition
 composition for example the word unity, unit and uni, all three share very different definitions AND uni is contained IN Unit and Unit is contained in Unity so 
 uni should NOT be contained in Unity? should we do that to reduce redundancies?????? or what YES make a list of tuples with one list being the list of objects and
 the second list holding the strings
+
+
+
+Multiple word inputs (multiple text document inputs)
+
+okay now figure out how to save the word objects to a json
+

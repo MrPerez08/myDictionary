@@ -9,8 +9,7 @@ class Word:
     def __init__(self,word,definition=""):
         self.vocab = word
         self.definition = definition
-        
-    compositions = []
+        self.compositions = []  # ← Make it an INSTANCE variable!
     #First list contains the OBJECTS of the composed words and the second list contains the STRINGS of the composed words
     #Is it necessary to contain that second list? no
     
@@ -33,7 +32,7 @@ y=Word("stupid")
 if y.vocab in x.vocab:
     x.add_Composition(y)
 
-print(x.compositions[0].vocab)
+#print(x.compositions[0].vocab)
 
 
 
