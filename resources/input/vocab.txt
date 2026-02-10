@@ -47,7 +47,7 @@ draughts
 intoxicate
 drunkard
 needling
-paried
+paries
 dreary
 gilded
 threadbare
@@ -71,7 +71,7 @@ perspiring
 dune
 sieve
 gorge
-tonload
+onload
 plunged
 itched
 saccharine
@@ -98,7 +98,7 @@ cataract
 smolder
 abstractedly
 tabloid
-cantrifuge
+centrifuge
 pratfall
 boff
 heaved
@@ -107,11 +107,11 @@ snobbish
 dictum
 leaden
 cower
-titilation
+titillation
 serenity
 pagar
 quibble
-memorians
+memoriam 
 equated
 dike
 gullet
@@ -141,14 +141,14 @@ grotesque
 limned
 parlor
 oblivion
-obliviated
-sirening
-silhouetts
+obliviate
+sirenic
+silhouettes
 seance
 ricocheted
 jet
 waded
-racketting
+racketing
 processions
 juggernaut
 provoke
@@ -172,12 +172,12 @@ rebut
 moor
 welter
 beatific
-perfunctarily
+perfunctorily
 vantage
 gaseous
 senseless
 slicker
-phosporescent
+phosphorescent
 abhors
 snort
 fender
@@ -198,7 +198,7 @@ bewildered
 reeling
 avalanche
 fumbling
-literateur
+litterateur
 manikin
 writhing
 spittle
@@ -268,7 +268,7 @@ tenacious
 embargo
 
 
-eccentricious
+eccentricities
 introspective
 psychiatrist
 manic
@@ -295,20 +295,20 @@ atrocity
 
 morose
 contralto
-adolescense
+adolescence
 psychoanalyst
 jungian
 psyche
 conscience
-ideologe
+ideologies
 ardent
-fredian
+freudian
 irreconcilable
 schism
 ardor
 dogma
 wooly
-woolyheaded
+wooly-headed
 aroused
 episcopal
 claptrap
@@ -332,7 +332,7 @@ thimble
 morsel
 quatrains
 couplets
-perversively
+pervasively
 squared
 progenitor
 extemporaneously
@@ -352,13 +352,14 @@ abraded
 solace
 litany
 carbon
-sancity
+sanctity
+sanctify
 vassar
 solemn
 pipsqueak
 anthology
 scarcity
-bluepenciled
+blue-penciled
 slenderized
 razored
 dimwit
@@ -405,7 +406,7 @@ prophet
 sociology
 sanitary
 liquidated
-subsequencially
+subsequential
 wherein
 subversive
 playwright
@@ -453,9 +454,9 @@ tendentious
 theology
 proclamation
 consult
-instrauration
+instauration
 trope
-talmudre
+talmud
 forfeit
 fabulist
 emersonian
@@ -478,7 +479,7 @@ horning
 convolutions
 bombardier
 squanders
-desolution
+desolation
 prattled
 hive
 oddities
@@ -497,7 +498,7 @@ rigmarole
 liberty
 omnipresent
 omnipresence
-pessimistinc
+pessimistic
 liberation
 enquiry
 emaciated
@@ -570,7 +571,7 @@ Voluble
 Bruising candor
 Propensity
 Veritable
-Corpuacular
+Corpuscular
 Impediment
 Leery
 Tact
@@ -642,7 +643,6 @@ Condescension
 Whetted
 Seldom
 Austerity
-Irreductable
 Loathing
 Inclination
 Temperament
@@ -827,12 +827,12 @@ condescension
 whetted
 seldom
 austerity
-irreductable
+irreducible
 loathing
 inclination
-temperment
+temperament
 sensibilities
-assidously
+assiduously
 bohemian
 pretentious
 rebuffed
@@ -855,7 +855,7 @@ Capitalism
 Inherent 
 Totem 
 Austerity 
-Nerodivergence 
+Neurodivergent 
 Stigma 
 Liberal 
 Gutted 
@@ -868,7 +868,7 @@ solitude
 curate 
 fad 
 chic 
-dianetic 
+dianetics
 bougie 
 boutique 
 quarterly 
@@ -888,7 +888,7 @@ Kinship
 Candor 
 Propensity 
 Veritable 
-Corpuacular 
+Corpuscular 
 Impediment 
 Leery 
 Tact 
@@ -902,17 +902,16 @@ Virgin
 longevity
 celibacy
 Expedite
-permiscuous
+promiscuous
 photosynthesize
 trite
-Loquatious
-Dilittante
+Dilettante
 Narcosis
 Charmed
 Fruitless
 Rigamarole
-Astinate
-Astitine 
+obstinate
+Astatine 
 Accord
 Azure
 Turnstile
@@ -921,7 +920,7 @@ Guile
 excursion
 Outcropped
 Erosion
-Cretacious
+Cretaceous
 lucrative
 Peruse
 Prowl
@@ -969,7 +968,7 @@ Channels
 Cultivated
 Floating
 Pertaining
-Timestables
+Timetables
 Furnished
 Colonel
 Lieutenant
@@ -1000,7 +999,7 @@ Luncheon
 Sublet
 medley
 Medulla
-Loquatious 
+Loquacious 
 Egregious 
 Egalitarian 
 Ingratiate 
@@ -1009,7 +1008,7 @@ Assailed
 Proletariat 
 Impetuous 
 
-Nonagression
+Nonaggression
 Nonaggression 
 Radicalism
 Totalitarian
@@ -1021,7 +1020,7 @@ Verdict
 Liberal 
 Morass
 Hysteria 
-Unfanatical
+Fanatical
 Reactionaries 
 Antipathy
 Corroborates 
@@ -1049,10 +1048,10 @@ Teetering
 Humanitarian  
 Political  
 Conservative
-Idealogue
+Ideologue
 Partisan
 Hewing
-Bonafide
+bonafide
 Defacto
 ponderous
 ​memorandum
@@ -1165,7 +1164,7 @@ ponderous
 ​pregnant 
 ​positrons
 ​mesotrons
-​deuteride
+​deuterium
 ​hubbub
 ​luminaries
 ​spunk
@@ -1192,7 +1191,7 @@ ponderous
 ​flamboyant
 ​vivacious
 ​morose
-​Puening
+​Pfennig
 ​metallurgical
 ​principality
 ​lessee
@@ -1218,7 +1217,7 @@ ponderous
 ​dogmatic
 ​condescension
 ​reconciliation
-​Grenelle
+​Grenoble
 ​entrenched
 ​sectarian
 ​among
